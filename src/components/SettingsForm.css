@@ -1,0 +1,124 @@
+:root {
+  --settings-bg: #ffffff;
+  --settings-text: #1a1a1a;
+  --settings-border: #d1d5db;
+  --settings-primary: #2563eb;
+  --settings-error: #dc2626;
+  --settings-success: #16a34a;
+  --settings-field-bg: #f9fafb;
+}
+
+[data-theme="dark"] {
+  --settings-bg: #111827;
+  --settings-text: #f3f4f6;
+  --settings-border: #374151;
+  --settings-primary: #3b82f6;
+  --settings-error: #f87171;
+  --settings-success: #4ade80;
+  --settings-field-bg: #1f2937;
+}
+
+body {
+  background-color: var(--settings-bg);
+  transition: background-color 0.2s ease;
+}
+
+.settings-form-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--settings-bg);
+  color: var(--settings-text);
+  border-radius: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.settings-form-container h1 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.settings-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+  border: none;
+  padding: 0;
+}
+
+.settings-form-field legend {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  padding: 0;
+}
+
+.settings-form-field label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.settings-form-field input[type="text"],
+.settings-form-field select {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--settings-border);
+  border-radius: 8px;
+  background-color: var(--settings-field-bg);
+  color: var(--settings-text);
+  font-size: 0.95rem;
+}
+
+.settings-form-field input[type="text"]:focus,
+.settings-form-field select:focus {
+  outline: 2px solid var(--settings-primary);
+  outline-offset: 1px;
+}
+
+.settings-form-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.settings-form-radio-option label {
+  font-weight: 400;
+}
+
+.settings-form-toggle {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-form-language {
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+}
+
+.settings-form-error {
+  color: var(--settings-error);
+  font-size: 0.8rem;
+}
+
+.settings-form-success {
+  color: var(--settings-success);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  background-color: var(--settings-primary);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
